@@ -15,7 +15,7 @@ autodetach on
 # Lock screen after 30 minutes of inactivity
 idle 1800 lockscreen
 
-hardstatus string "screen@%H: %h"
+hardstatus string "screen@%H: %h %t %f"
 
 # make hardstatus appear in xterm title
 termcapinfo xterm*|rxvt*|urxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
