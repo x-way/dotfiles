@@ -1,0 +1,28 @@
+# $Id: .screenrc,v 1.6 2008-12-10 12:40:30 x-way Exp $
+
+# Don't show startup message
+startup_message off
+
+#caption always "%{= kw}%-w%{= RW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
+#caption always "%{g}%{R}Host: %H %{-}|%{Y} Time: %c %{-}|%{B} Load: %l %{-}|%{M} Screen: %n %{-}|%{C}Title: %t %?%{-}|%{W}Hardstatus: %h %?%{-}|%{W} %-w%{R}*%n %t%{-}%+w"
+caption always "%{gk}%{y} %H %{-}|%{b} %c %{-}|%{w} %-w%{R}*%n %?%t%:%h%?%{-}%+w"
+
+defscrollback 100000
+
+# Automatically detach on hangup
+autodetach on
+
+# Lock screen after 30 minutes of inactivity
+idle 1800 lockscreen
+
+hardstatus string "screen@%H: %h"
+
+# make hardstatus appear in xterm title
+termcapinfo xterm*|rxvt*|urxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+
+# xterm scrollbar should work with screen
+# also for scroll wheel
+termcapinfo xterm ti@:te@
+termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+termcapinfo rxvt ti@:te@
+termcapinfo rxvt 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
