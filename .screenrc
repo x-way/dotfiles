@@ -7,7 +7,7 @@ startup_message off
 #caption always "%{g}%{R}Host: %H %{-}|%{Y} Time: %c %{-}|%{B} Load: %l %{-}|%{M} Screen: %n %{-}|%{C}Title: %t %?%{-}|%{W}Hardstatus: %h %?%{-}|%{W} %-w%{R}*%n %t%{-}%+w"
 caption always "%{gk}%{y} %H %{-}|%{b} %c %{-}|%{w} %-w%{R}*%n %?%t%:%h%?%{-}%+w"
 
-defscrollback 100000
+defscrollback 10000
 
 # Automatically detach on hangup
 autodetach on
