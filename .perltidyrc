@@ -1,0 +1,25 @@
+# aj's .perltidyrc
+
+# I do my own line wrapping, don't touch it
+--maximum-line-length=0
+
+# $obj->{ $parsed_sql->{ 'table' }[0] }; => $obj->{$parsed_sql->{'table'}[0]};
+--brace-tightness=2
+
+# %bf = map {$_ => -M $_} grep {/\.deb$/} dirents '.'; => %bf = map { $_ => -M $_ } grep { /\.deb$/ } dirents '.';
+--block-brace-tightness=0
+
+# $width = $col[ $j + $k ] - $col[ $j ]; => $width = $col[$j + $k] - $col[$j];
+--square-bracket-tightness=2
+
+# if ( ( my $len_tab = length( $tabstr ) ) > 0 ) { => if ( ( my $len_tab = length($tabstr) ) > 0 ) {
+#--paren-tightness=1
+# this prevents whitespace in fuction calls, but also squashes it inside ifs
+--paren-tightness=2
+
+--cuddled-else
+
+# no space before semicolons in for loops
+--nospace-for-semicolon
+
+--nooutdent-long-lines
