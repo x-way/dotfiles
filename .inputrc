@@ -1,0 +1,19 @@
+$include /etc/inputrc
+
+# vi
+set editing-mode vi
+
+set history-size 10000
+
+# up
+"\e[A": history-search-backward
+# down
+"\e[B": history-search-forward
+
+TAB: menu-complete
+
+# intelligetn autocompleting
+set skip-completed-text on
+
+set colored-stats on
+set visible-stats on
