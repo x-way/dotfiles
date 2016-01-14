@@ -1,0 +1,16 @@
+# vi
+bind -v
+
+history size 10000
+# don't keep duplicates
+history unique 1
+
+# up
+bind "\e[A" ed-prev-history
+# down
+bind "\e[B" ed-next-history
+
+# inc search backwards
+bind "^R" em-inc-search-prev
+# tab completion
+bind \\t rl_complete
