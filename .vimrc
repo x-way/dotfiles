@@ -17,10 +17,11 @@ set showmatch		" briefly jump to matching parenthesis when entering the second o
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set history=100		" keep 100 lines of command line history
+set history=200		" keep 200 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set wrapscan		" start again at the beginning when reaching eof
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -35,6 +36,8 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
+
+set loadplugins
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -88,6 +91,7 @@ EOF
 endif
 
 set modeline
+set modelines=5
 
 set title		" show vim-title in xterm
 
@@ -106,7 +110,7 @@ if has("unix")
 endif
 set bdir=~/tmp
 
-set mouse=a "enable mouse scrolling!!!
+"set mouse=a "enable mouse scrolling!!!
 
 " use Windows clipboard
 if has("win32")
