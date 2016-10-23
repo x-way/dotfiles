@@ -1,0 +1,20 @@
+[user]
+	name = Andreas Jaggi
+	email = andreas.jaggi@waterwave.ch
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
+	interactive = auto
+	showbranch = auto
+	ui = auto
+[alias]
+	co = checkout
+	l = log --oneline --decorate --graph
+	cp = cherry-pick
+[push]
+	default = simple
+[include]
+	# for passwords / credentials etc.
+	path = ~/.gitconfig.local

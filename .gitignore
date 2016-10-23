@@ -1,0 +1,10 @@
+# sensitive gitconfig values
+.gitconfig.local
+# temporary files
+*~
+# mac stuff
+.Trash
+._*
+.DS_Store
+.TemporaryItems
+.localized
