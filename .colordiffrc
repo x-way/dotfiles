@@ -1,0 +1,7 @@
+banner=no
+
+plain=off
+newtext=darkgreen
+oldtext=darkred
+diffstuff=darkmagenta
+cvsstuff=darkyellow
