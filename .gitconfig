@@ -14,8 +14,11 @@
 	l = log --oneline --decorate --graph
 	cp = cherry-pick
 	sh = show
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 [push]
 	default = simple
 [include]
 	# for passwords / credentials etc.
 	path = ~/.gitconfig.local
+[status]
+	color = auto
