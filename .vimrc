@@ -119,3 +119,6 @@ endif
 
 " printing
 set printoptions+=syntax:y
+
+" Perl coding guidelines
+autocmd FileType perl set expandtab shiftwidth=4 softtabstop=4
