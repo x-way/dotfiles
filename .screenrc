@@ -32,3 +32,6 @@ sorendition wk # white on black
 
 # turn all beeps into visual
 vbell on
+
+# 256 color
+term screen-256color
