@@ -122,3 +122,14 @@ set printoptions+=syntax:y
 
 " Perl coding guidelines
 autocmd FileType perl set expandtab shiftwidth=4 softtabstop=4
+
+
+" paint background grey for everything longer than 80 characters
+highlight OverLength ctermbg=DarkGrey guibg=DarkGrey
+match OverLength /\%>80v.\+/
+
+" don't want to waste space by having an extra statusline, thus we gave to
+" hack all this stuff into the ruler
+" see https://gabri.me/blog/diy-vim-statusline for inspiration regarding the
+" mode display
+set rulerformat=%{toupper(mode())}\ \ \ %l,%c%V%=%P
