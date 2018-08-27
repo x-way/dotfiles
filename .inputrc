@@ -14,6 +14,8 @@ TAB: menu-complete
 
 # intelligetn autocompleting
 set skip-completed-text on
+set completion-ignore-case on
+set show-all-if-ambiguous on
 
 set colored-stats on
 set visible-stats on
