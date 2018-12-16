@@ -22,3 +22,5 @@
 	path = ~/.gitconfig.local
 [status]
 	color = auto
+[diff]
+	colorMoved = dimmed-zebra
