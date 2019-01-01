@@ -10,6 +10,8 @@
 	showbranch = auto
 	ui = auto
 [alias]
+	# remove double git typo, https://jeffkreeftmeijer.com/git-git/
+	git = !git
 	co = checkout
 	l = log --oneline --decorate --graph
 	cp = cherry-pick
