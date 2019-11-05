@@ -13,7 +13,7 @@ defscrollback 10000
 autodetach on
 
 # Lock screen after 30 minutes of inactivity
-idle 1800 lockscreen
+#idle 1800 lockscreen
 
 hardstatus string "screen@%H: %h %t %f"
 
