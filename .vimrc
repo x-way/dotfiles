@@ -30,12 +30,14 @@ map Q gq
 " text is lost and it only works for putting the current register.
 "vnoremap p "_dp
 
+" Syntax highlighting {{{
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
+" }}}
 
 set loadplugins
 
@@ -78,6 +80,7 @@ endif " has("autocmd")
 " 256-colors :-)
 "set t_Co=256
 
+" Python {{{
 if has('python')
 " gf on an import statement shows the corresponding file
 python << EOF
@@ -89,9 +92,11 @@ for p in sys.path:
 		vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
 EOF
 endif
-
+" }}}
+" enable modelines {{{
 set modeline
 set modelines=5
+" }}}
 
 set title		" show vim-title in xterm
 
@@ -103,33 +108,41 @@ if (&term =~ '^screen')
 	set titlelen=15
 endif
 
+" Backups (not enabled) {{{
 if has("unix")
 	if !isdirectory(expand("~/tmp/."))
 		!mkdir -p ~/tmp/
 	endif
 endif
 set bdir=~/tmp
+" }}}
 
 "set mouse=a "enable mouse scrolling!!!
 
-" use Windows clipboard
+" use Windows clipboard (if available) {{{
 if has("win32")
 	set clipboard+=unnamed
 endif
-
-" printing
+"}}}
+" Print sntax highlighting {{{
 set printoptions+=syntax:y
-
-" Perl coding guidelines
+" }}}
+" Perl coding guidelines {{{
 autocmd FileType perl set expandtab shiftwidth=4 softtabstop=4
-
-
-" paint background grey for everything longer than 80 characters
-highlight OverLength ctermbg=DarkGrey guibg=DarkGrey
-match OverLength /\%>80v.\+/
-
+" }}}
+" paint background grey for everything longer than 80 characters {{{
+"highlight OverLength ctermbg=DarkGrey guibg=DarkGrey
+"match OverLength /\%>80v.\+/
+" }}}
+" Ruler {{{
 " don't want to waste space by having an extra statusline, thus we gave to
 " hack all this stuff into the ruler
 " see https://gabri.me/blog/diy-vim-statusline for inspiration regarding the
 " mode display
 set rulerformat=%{toupper(mode())}\ \ \ %l,%c%V%=%P
+" }}}
+" .vimrc modeline {{{
+" enable folding for this .-vimrc file (to organize it's contents)
+" from: https://dougblack.io/words/a-good-vimrc.html#organization
+" vim:foldmethod=marker:foldlevel=0
+" }}}
