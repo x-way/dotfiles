@@ -97,7 +97,7 @@ endif
 set modeline
 set modelines=5
 " }}}
-
+" show title in terminal {{{
 set title		" show vim-title in xterm
 
 if (&term =~ '^screen')
@@ -107,7 +107,7 @@ if (&term =~ '^screen')
 	set t_fs=\
 	set titlelen=15
 endif
-
+" }}}
 " Backups (not enabled) {{{
 if has("unix")
 	if !isdirectory(expand("~/tmp/."))
@@ -130,7 +130,7 @@ set printoptions+=syntax:y
 " Perl coding guidelines {{{
 autocmd FileType perl set expandtab shiftwidth=4 softtabstop=4
 " }}}
-" paint background grey for everything longer than 80 characters {{{
+" paint background grey for everything longer than 80 characters (not enabled) {{{
 "highlight OverLength ctermbg=DarkGrey guibg=DarkGrey
 "match OverLength /\%>80v.\+/
 " }}}
