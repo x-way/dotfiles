@@ -141,6 +141,15 @@ autocmd FileType perl set expandtab shiftwidth=4 softtabstop=4
 " mode display
 set rulerformat=%{toupper(mode())}\ \ \ %l,%c%V%=%P
 " }}}
+" vimdiff {{{
+" use more human-friendly diff algorithm if available
+" from https://vimways.org/2018/the-power-of-diff/
+" from https://www.reddit.com/r/vim/comments/cn20tv/tip_histogrambased_diffs_using_modern_vim/
+" from https://begriffs.com/posts/2019-07-19-history-use-vim.html#diffs-and-patches
+if has("patch-8.1.0360")
+	set diffopt+=internal,algorithm:patience,indent-heuristic
+endif
+" }}}
 " .vimrc modeline {{{
 " enable folding for this .-vimrc file (to organize it's contents)
 " from: https://dougblack.io/words/a-good-vimrc.html#organization
