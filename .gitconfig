@@ -26,3 +26,9 @@
 	color = auto
 [diff]
 	colorMoved = dimmed-zebra
+	# use more human-friendly diffs (similar to vimdiff)
+	indentHeuristic = true
+[commit]
+	# show diff in commit message edit window
+	# https://jdhao.github.io/2021/07/24/git_show_diff_when_commiting/
+	verbose = true
