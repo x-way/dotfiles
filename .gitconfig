@@ -30,6 +30,10 @@
 	colorMoved = dimmed-zebra
 	# use more human-friendly diffs (similar to vimdiff)
 	indentHeuristic = true
+	# Use the slower but better patience diff algorithm
+	algorithm = patience
+	# Use new diff algorithm to make e.g. function diffs look better.
+	compactionHeuristic = true
 [commit]
 	# show diff in commit message edit window
 	# https://jdhao.github.io/2021/07/24/git_show_diff_when_commiting/
