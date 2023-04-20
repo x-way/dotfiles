@@ -1,6 +1,8 @@
 [user]
 	name = Andreas Jaggi
 	email = x-way@waterwave.ch
+[github]
+	user = x-way
 [color]
 	diff = auto
 	status = auto
