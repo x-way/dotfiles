@@ -45,3 +45,6 @@
 	verbose = true
 [init]
 	defaultBranch = main
+
+[includeIf "hasconfig:remote.*.url:git@github.com:getyourguide/**"]
+	path = ~/.gitconfig.getyourguide
