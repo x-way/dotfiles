@@ -21,6 +21,8 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 [push]
 	default = simple
+	# directly push&create new branches into the remote repo
+	autoSetupRemote = true
 [pull]
 	# Default to rebasing on pulls
 	rebase = true
