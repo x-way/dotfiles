@@ -33,6 +33,7 @@
 	color = auto
 [diff]
 	colorMoved = dimmed-zebra
+	colorMovedWS = allow-indentation-change
 	# use more human-friendly diffs (similar to vimdiff)
 	indentHeuristic = true
 	# Use the slower but better patience diff algorithm
