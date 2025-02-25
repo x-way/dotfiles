@@ -49,5 +49,12 @@
 [merge]
 	tool = vimdiff
 
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+
 [includeIf "hasconfig:remote.*.url:git@github.com:getyourguide/**"]
 	path = ~/.gitconfig.getyourguide
