@@ -46,6 +46,8 @@
 	verbose = true
 [init]
 	defaultBranch = main
+[merge]
+	tool = vimdiff
 
 [includeIf "hasconfig:remote.*.url:git@github.com:getyourguide/**"]
 	path = ~/.gitconfig.getyourguide
