@@ -5,7 +5,10 @@ startup_message off
 
 #caption always "%{= kw}%-w%{= RW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
 #caption always "%{g}%{R}Host: %H %{-}|%{Y} Time: %c %{-}|%{B} Load: %l %{-}|%{M} Screen: %n %{-}|%{C}Title: %t %?%{-}|%{W}Hardstatus: %h %?%{-}|%{W} %-w%{R}*%n %t%{-}%+w"
-caption always "%{gk}%{y} %H %{-}|%{b} %c %{-}|%{w} %-w%{R}*%n %?%t%:%h%?%{-}%+w"
+#caption always "%{gk}%{y} %H %{-}|%{b} %c %{-}|%{w} %-w%{R}*%n %?%t%:%h%?%{-}%+w"
+
+# screen5
+caption always "%{2;0}%{3} %H %{-}|%{4} %c %{-}|%{7} %-w%{9}*%n %?%t%:%h%?%{-}%+w"
 
 defscrollback 10000
 
@@ -34,4 +37,7 @@ sorendition wk # white on black
 vbell on
 
 # 256 color
-term screen-256color
+#term screen-256color
+
+auth off
+truecolor on
